@@ -1,16 +1,134 @@
-# React + Vite
+# 🎹 Toy Keyboard MIDI Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An experimental audio-to-MIDI web application that converts sounds from a toy keyboard into MIDI notes using real-time microphone pitch detection and the Web MIDI API.
 
-Currently, two official plugins are available:
+Built with React, Vite, Pitchy, and WebMidi.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
+## 🌍 Live Demo
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🎤 Real-time microphone pitch detection
+* 🎹 Converts toy keyboard sounds into MIDI notes
+* 🎼 Sends MIDI output directly to FL Studio
+* 💡 Live piano visualization
+* ⚡ Real-time note and frequency display
+* 🖥️ Responsive modern UI
+* 🌐 Browser-based — no Arduino required
+* 🔊 Experimental support for low-quality toy keyboards
+
+---
+
+## 🛠️ Tech Stack
+
+* React
+* Vite
+* Web Audio API
+* Pitchy
+* WebMidi
+* JavaScript
+* HTML/CSS
+
+---
+
+## 🚀 How It Works
+
+```text
+Toy Keyboard
+      ↓
+Laptop Microphone
+      ↓
+Pitch Detection
+      ↓
+MIDI Conversion
+      ↓
+Virtual MIDI Port (loopMIDI)
+      ↓
+FL Studio
+```
+
+The application listens to audio from the toy keyboard through the microphone, detects the dominant pitch, converts it into MIDI notes, and sends the MIDI signal to FL Studio using a virtual MIDI connection.
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/toy-keyboard-midi-converter.git
+```
+
+Move into the project folder:
+
+```bash
+cd toy-keyboard-midi-converter
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🎛️ FL Studio Setup
+
+1. Install loopMIDI
+2. Create a virtual MIDI port named:
+
+```text
+ToyMIDI
+```
+
+3. Open FL Studio
+4. Go to:
+
+```text
+Options → MIDI Settings
+```
+
+5. Enable the `ToyMIDI` input port
+6. Load any instrument (FL Keys, Piano, Synth, etc.)
+7. Start the web app and play your toy keyboard
+
+---
+
+## 📱 Browser Support
+
+Recommended browsers:
+
+* Google Chrome
+* Microsoft Edge
+
+Web MIDI support may not work properly in Firefox.
+
+---
+
+## ⚠️ Limitations
+
+This project is experimental and designed mainly for learning and creative exploration.
+
+Toy keyboards for children often produce:
+
+* unstable frequencies
+* harmonics
+* noisy speaker output
+* inaccurate tuning
+
+Because of this:
+
+* note detection may occasionally be inaccurate
+* chords are not supported
+* some latency may occur

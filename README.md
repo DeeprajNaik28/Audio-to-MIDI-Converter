@@ -1,6 +1,6 @@
-# 🎹 Toy Keyboard MIDI Converter
+# 🎹 Audio To MIDI Converter
 
-An experimental audio-to-MIDI web application that converts sounds from a toy keyboard into MIDI notes using real-time microphone pitch detection and the Web MIDI API.
+An experimental audio-to-MIDI web application that converts sounds from any toy keyboard or vocals into MIDI notes using real-time microphone pitch detection and the Web MIDI API.
 
 Built with React, Vite, Pitchy, and WebMidi.
 
@@ -12,7 +12,7 @@ https://toy-keyboard-midi-converter.vercel.app/
 ## ✨ Features
 
 * 🎤 Real-time microphone pitch detection
-* 🎹 Converts toy keyboard sounds into MIDI notes
+* 🎹 Converts audio sounds into MIDI notes
 * 🎼 Sends MIDI output directly to FL Studio
 * 💡 Live piano visualization
 * ⚡ Real-time note and frequency display
